@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createGlobalStyle } from "styled-components";
+import Header from './components/Header';
+import QuizBoard from './components/QuizBoard/QuizBoard';
+// import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    color: #1b2c4b;
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
+    font-family: 'Roboto Slab', serif;
+  }
+`;
+
+const App = () => {
+  
+  return <>
+      <GlobalStyle />
+      <Header />
+      <QuizBoard />
+    </>
 }
 
 export default App;
