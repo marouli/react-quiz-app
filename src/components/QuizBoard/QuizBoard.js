@@ -5,7 +5,13 @@ import Question from './Question';
 import Result from './Result';
 
 const StyledBoard = styled.main`
-
+    margin: auto;
+    width: 70%;
+    margin-top: 60px;
+    padding: 35px;
+    background-color: #f2f3f4;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #d5d8dc;
 `;
 
 class QuizBoard extends Component {

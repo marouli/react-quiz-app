@@ -1,12 +1,28 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Result = ({score, reset}) => (
-    <div className="score-board">
+const StyledResult = styled.section`
+    button {
+        margin-top: 12px;
+        margin-right: 15px;
+        padding: 5px 12px 5px 12px;
+        font-size: 18px;
+        color: #fff;
+        background-color: #52be80;
+        border: none;
+        border-radius: 5px;
+    }
+`
+
+const Result = ({score, reset}) => {
+    return <StyledResult>
         <div className="score">You scored {score} / 5 correct answers!</div>
         <button className="playBtn" onClick={reset}>
             Play again!
         </button>
-    </div>
-)
+    </StyledResult>
+}
+
+
 
 export default Result
